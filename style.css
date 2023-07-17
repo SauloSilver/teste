@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document 
+seletor { propriedade: valor; }
+
+seletor: é um elemento da marcação HTML identificado pelo seu nome (por exemplo: <p>, <h1>, <form>), pelo nome de uma classe aplicada ao elemento da marcação HTML (por exemplo: .topo, .principal, .menu), pelo nome de um identificador ID aplicado ao elemento da marcação HTML (por exemplo: #tudo, #auxiliar, #rodape) ou por qualquer outro identificador CSS de elementos ou trechos da marcação HTML, genericamente denominados de seletores CSS.
+
+propriedade: é a propriedade do elemento HTML ao qual será aplicada a estilização definida no valor (por exemplo: tamanho da fonte, cor do texto, altura do elemento).
+
+valor: é a característica específica a ser assumida pela propriedade (por exemplo: letra tipo arial, cor azul, fundo verde, altura igual a 300px)
+
+Ao conjunto propriedade: valor denominamos declaração CSS.
+
+Na sintaxe de uma regra CSS, escreve-se o seletor e a seguir a propriedade e o valor separados por dois pontos e colocados entre chaves { }.
+
+É possível escrever mais de uma declarações CSS em uma regra CSS com o objetivo de estilizar-se várias propriedades de um mesmo seletor. Neste caso deve-se usar ponto-e-vírgula para separar as declaração CSS constantes da regra CSS. O ponto-e-vírgula é facultativo quando a regra CSS for constituída de uma só declaração CSS e também facultativo após a última declaração CSS quando houver mais de uma declaração CSS.
+
+É recomendável que se use, sempre, o ponto-e-vírgula após cada declaração CSS, pois no caso de futuramente ter que se acrescentar mais declarações na regra CSS não se corra o risco de esquecer eventual ponto-e-vírgula inicialmente omitido.
+
+*/
+
+/* 
+
+FAZENDO CLASSES DENTRO DE CLASSE SEM BUG
+
+NOMEAÇÃO (COMO NOMEAR)
+
+1) Classes
+Utilizamos o padrão BEM (bloco, elemento, modificador), com o __
+Neste caso o bloco é a <section class="quem-somos"> e como é uma palavra composta, utilizamos o - entre as palavras na hora de utilizarmos o padrão BEM do elemento. Caso o bloco não fosse uma palavra composta, a nomeação do elemento ficaria simplesmente palavra__titulo.
+
+2) Pastas
+As pastas irão seguir o padrão CamelCase, em que a primeira palavra estará em minúsculo e as seguintes iniciaram com a primeira letra em maiúscula, sem que haja espaços ou traços.
+quemSomos
+
+3) Arquivos
+Cada arquivo CSS será nomeado com - entre o nome da pasta que esta localizada e o nome do elemento que será estilizado.
+quemSomos-titulo.css
+
+
+<section class="quem-somos">
+    <h3 class="quem-somos__titulo">Quem somos</h3>
+    <p class="quem-somos__descricao">Conheça a comunidade por trás da iniciativa</p>
+    <div class="pessoas">
+        <div class="pessoa">
+            <div class="pessoa__imagem pessoa__imagem--roberta"></div>
+            <span class="pessoa__nome">Roberta</span>
+            <span class="pessoa__funcao">Conteúdo</span>
+        </div>
+    </div>
+</section>
+
+*/
+.topo {
+  width: 100%;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topo__my-div {
+  color: black;
+  font-family: Arial;
+  font-size: 40px;
+}
+
+.img {
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.menu {
+  width: 100%;
+  height: 23px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__my-div {
+  color: black;
+  background-color: gray;
+  font-family: Arial;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.menu__my-div:hover {
+  background-color: lightgray;
+}
+
+body,
+html {
+  width: 100%;
+  /*lado direito da página até o final*/
+  margin: 0;
+  /*lado esquerdo da página até o final*/
+  padding: 0;
+  background-color: #FFFFFF;
+}
+
+h1 {
+  font-family: Arial;
+  font-size: 30px;
+  text-align: justify;
+  color: black;
+}
+
+/* justify-all não é mais suportado pelos navegadores */
+
+p {
+  font-family: Arial;
+  text-align: justify;
+  font-size: 20px;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  /* Remove o sublinhado */
+  color: inherit;
+  /* Herda a cor do elemento pai */
+}
+
+.page {
+  margin-top: 1px;
+  margin-right: 1px;
+  margin-left: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.table {
+  width: 15%;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__my-div {
+  color: black;
+  font-family: Arial;
+  font-size: 15px;
+}
